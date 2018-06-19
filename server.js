@@ -37,8 +37,8 @@ app.get('/api/timestamp/:timeInput', function (req, res) {
   }
   
   if (!/\W/.test(req.params.timeInput)) {
-    var d = new Date(req.params.timeInput * 1000).toUTCString()
     var u = req.params.timeInput * 1000
+    var d = new Date(u).toUTCString()
   }
   
   console.log(req.params)
